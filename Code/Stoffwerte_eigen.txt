@@ -1,0 +1,17 @@
+
+	### Stoffdaten Isolation
+
+### Wärmeleitfähigkeit [W/(m*K)]
+	lambda_i = 0.25
+
+
+	### Stoffdaten Heizöl
+
+### Wärmekapazität [J/(kg*K)]
+	cp = 1800.0
+
+### Wärmeleitfähigkeit [W/(m*K)]
+	lambdaOel = 0.12
+
+### dynamische Viskosität [Pa*s]
+	etaOel = 6.223D-3

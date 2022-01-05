@@ -1,0 +1,16 @@
+
+	### Stoffdaten Edelstahl X6Cr17 bei p = 1 bar
+
+### Entnommen aus VDI-Wärmeatlas
+
+ T [°C]	| lambda [W/mK]	
+		|
+ 20		| 24
+ 100	| 24
+ 200	| 25
+ 300	| 25	
+ 400	| 25	
+ 500	| 25	
+ 600	| 26	
+ 700	| 26
+ 800	| 27	
