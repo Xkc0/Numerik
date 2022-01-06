@@ -19,7 +19,7 @@ Variablenpositionen im Array:
         33-49:      cp Luft
         50-66:      lambda Luft
         67-83:      eta Luft        
-        84-100:     ny Luft
+        84-100:     ny LuftS
         101-117:    Pr Luft
         118-126:    lambda X6Cr17
 */
@@ -34,17 +34,6 @@ Dynamische Daten:
 
 */
 
-/*
-double Oel(double daten[], double dyn_daten[], double **Temp, double z){
-    return ((2 * M_PI) / (daten [12] * daten[13])) * ((Temp[1][1] - Temp[0][1])  / (1 / (dyn_daten[0] * daten[0]) + (log(daten[1] / daten[0])) / daten[118] + (1 / (dyn_daten[1] * daten[1]))));
-}
-
-double Luft(double daten[], double dyn_daten[], double **Temp, double z){
-    return ((2 * M_PI) / (daten[11] * daten[33])) * (((700. - Temp[1][1])  / (1 / (dyn_daten[1] * daten[2]) + (log(daten[3] / daten[2])) / daten[118] + (1 / (dyn_daten[2] * daten[3])))) - ((Temp[1][1] - Temp[0][1])  / (1 / (dyn_daten[0] * daten[0]) + (log(daten[1] / daten[0])) / daten[118] + (1 / (dyn_daten[1] * daten[1])))));
-
-}
-
-*/
 
 void datenAusgeben(double daten[], int StoffdatenAnzahl){
     for(int i = 0; i <= StoffdatenAnzahl; i++){
@@ -52,7 +41,7 @@ void datenAusgeben(double daten[], int StoffdatenAnzahl){
     }
 }
 
-void datenEinlesen(double *daten[]){
+void datenEinlesen(double daten[]){
     ifstream datei;
     datei.open("Stoffdaten.txt");
     int cnt = 0;
@@ -61,4 +50,8 @@ void datenEinlesen(double *daten[]){
         cnt++;
     }
     datei.close();
+}
+
+double Interpolation(double x0, double y0, double x1, double y1, double xp){
+    return y0 + ((y1-y0)/(x1-x0)) * (xp - x0);
 }
